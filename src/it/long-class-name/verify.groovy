@@ -24,6 +24,6 @@
 
 String log = new File(basedir, 'build.log').text;
 [
-  "Class 'ClassNameIsTooComplex' has bad naming, class name is more than 15, it's too complex. Consider more simple name, read: https://www.yegor256.com/2015/01/12/compound-name-is-code-smell.html"
+  "Class 'ClassNameIsTooComplex' has bad naming, class name is more than 15, it's too complex. Consider more simple names, read: https://www.yegor256.com/2015/01/12/compound-name-is-code-smell.html (LongClassNameCheck)"
 ].each { assert log.contains(it): "Log doesn't contain ['$it']" }
 true

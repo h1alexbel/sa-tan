@@ -54,12 +54,14 @@ public final class LongClassNameCheck implements Rule {
             this::longerThanOk,
             new WrongClassNamingComplaint(
                 this.name,
-                // @checkstyle StringLiteralsConcatenationCheck (4 lines).
+                // @checkstyle StringLiteralsConcatenationCheck (6 lines).
                 String.format(
                     "class name is more than %s, it's too complex."
-                    + " Consider more simple name,"
-                    + " read: https://www.yegor256.com/2015/01/12/compound-name-is-code-smell.html",
-                    this.fine
+                    + " Consider more simple names,"
+                    + " read: https://www.yegor256.com/2015/01/12/compound-name-is-code-smell.html"
+                    + " (%s)",
+                    this.fine,
+                    this.getClass().getSimpleName()
                 )
             )
         ).complaints();
